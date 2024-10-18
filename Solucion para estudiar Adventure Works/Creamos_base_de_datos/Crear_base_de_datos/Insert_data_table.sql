@@ -14,8 +14,9 @@ Where ComunidadId = 7;
 
 INSERT INTO ComunidadesAutonomas VALUES (10, 'Comunitat Valenciana');
 
+select * from ComunidadesAutonomas; --esto permite que al ejecutarlo junto al Insert into veamos al momento el resultado en la parte inferior. 
 
-select * from ComunidadesAutonomas;
+--para sustituir un dato ya insertado en una de las filas 
 
 UPDATE ComunidadesAutonomas 
 SET Nombre = 'Cantabria'
@@ -52,10 +53,38 @@ INSERT INTO Comunidades_autonumeradas VALUES
 
 select * from Comunidades_autonumeradas;
 
+INSERT INTO Comunidades_autonumeradas_pares VALUES 
+('Andalucía'),
+('Aragón'),
+('Cataluña'),
+('Balears, Illes'),
+('Canarias'),
+('Cantabria'),
+('Castilla León'),
+('Castilla-La Mancha'),
+('Cataluña'),
+('Extremadura'),
+('Galicia'),
+('Madrid, Comunidad de'),
+('Murcia, Región de'),
+('Navarra, Comunidad Foral de'),
+('País Vasco'),
+('Rioja, La'),
+('Ceuta'),
+('Melilla');
+
+select * from Comunidades_autonumeradas_pares;
+
 --PARA BORRAR UNA LINEA O UN  BLOQUE DE LINEAS
 DELETE FROM Comunidades_autonumeradas
 where ComId BETWEEN 5 AND 11;
 select * from Comunidades_autonumeradas;
 
 --Importación de datos
---mañana lo vemos
+
+-- Pulsamos botón derecho encima del nombre de la base de datos. En el menú pulsamos la opción TASKS. Se abrirá un auxiliar WIZARD
+--Seleccionamos el tipo de archivo donde tenemos los datos. en el campus el profe subió un fichero excel con los datos y dos ficheros planos (CSV) por si no teníamos excel. 
+--Siguiendo el auxiliar de importación WIZARD, una vez seleccionado el tipo de fichero, seleccionamos el fichero en si. podremos visualizar el contenido del mismo
+-- a través de la barra lateral.
+-- Seleccionamos el destino. Comprobamos que está en la base de datos correcto.
+-- se pueden meter los datos en una table que tengamos creada y vacía o bien crear la tabla desde el propio WIZARD. Con la opción mapping permite ajustar los parametros de la tabla. 

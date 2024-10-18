@@ -1,0 +1,6 @@
+CREATE TABLE Provincias (
+    ProvId TINYINT PRIMARY KEY,
+    ProvNom VARCHAR(22) NOT NULL,
+	ProvHab INT NOT NULL,
+	ComID TINYINT FOREIGN KEY REFERENCES ComunidadesAutonomas
+);
