@@ -1,0 +1,13 @@
+CREATE TABLE ComunidadesAutonomas (
+    ComId TINYINT PRIMARY KEY,
+    ConNom NVARCHAR(27) NOT NULL
+);
+CREATE TABLE Comunidades_autonumeradas(
+	ComID TINYINT IDENTITY (1,1) PRIMARY KEY,
+	ConNom VARCHAR(27) NOT NULL
+);
+CREATE TABLE Comunidades_autonumeradas_pares(
+	ComID TINYINT IDENTITY (2,4) PRIMARY KEY,
+	ConNom VARCHAR(27) NOT NULL
+);
+

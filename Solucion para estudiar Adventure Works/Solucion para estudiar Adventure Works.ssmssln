@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 20.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "diagramas", "Joins\diagramas.ssmssqlproj", "{0DE485EC-CEEB-4B7A-A566-C558754D4EB4}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Explorar tablas+", "Explorar tablas+\Explorar tablas+.ssmssqlproj", "{204AD6E9-AA2B-4717-9BE9-B06D259F5DF2}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "explorar tablas", "explorar tablas\explorar tablas.ssmssqlproj", "{08C54DF4-5636-473E-98C9-ADAF7E978302}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Crear_base_de_datos", "Creamos_base_de_datos\Crear_base_de_datos\Crear_base_de_datos.ssmssqlproj", "{3D7025DB-A9F9-42D1-B709-180548C6DD05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{768537C7-5AA7-4A2C-8D74-1253D6F3E420}.Default|Default.ActiveCfg = Default
+		{0DE485EC-CEEB-4B7A-A566-C558754D4EB4}.Default|Default.ActiveCfg = Default
+		{204AD6E9-AA2B-4717-9BE9-B06D259F5DF2}.Default|Default.ActiveCfg = Default
+		{08C54DF4-5636-473E-98C9-ADAF7E978302}.Default|Default.ActiveCfg = Default
+		{3D7025DB-A9F9-42D1-B709-180548C6DD05}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2A398D0-B0CA-44CA-93A1-00F4093D38FE}
+	EndGlobalSection
+EndGlobal
