@@ -24,10 +24,12 @@ GROUP BY ca.Nombre
 ORDER BY TotalPoblación DESC;
 
 
---intentando formatear el interior de las celdas de NumerodeProvincias y TotalPoblacion
-SELECT ca.Nombre, COUNT (p.ProvId) AS NumerodeProvincias, RIGHT(SPACE(20) + FORMAT(SUM (p.ProvHab), 'N0'), 20) AS TotalPoblación --FORMAT N0 indicarle que es estilo numerico y el 0 para que no imprima el número con decimales
+--formatear el interior de las celdas de TotalPoblacion y que quede en orden descendiente 
+SELECT ca.Nombre, FORMAT(SUM (p.ProvHab), 'N0') AS TotalPoblación --FORMAT N0 indicarle que es estilo numerico y el 0 para que no imprima el número con decimales
 FROM [Provincias] AS p
 inner join [ComunidadesAutonomas] AS ca
 ON ca.ComID = p.ComID
 GROUP BY ca.Nombre
-ORDER BY NumerodeProvincias DESC;
+ORDER BY SUM (p.ProvHab) DESC;
+
+
