@@ -15,6 +15,15 @@ ON ca.ComID = p.ComID
 GROUP BY ca.Nombre
 ORDER BY NumerodeProvincias DESC;
 
+-- aquí quiero filtrar para que me diga el número de provincias de una CCAA en concreto
+SELECT ca.Nombre, COUNT (p.ProvId) AS NumerodeProvincias, FORMAT(SUM (p.ProvHab), 'N0') AS TotalPoblación --FORMAT N0 indicarle que es estilo numerico y el 0 para que no imprima el número con decimales
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+WHERE ca.Nombre = 'Andalucía'
+GROUP BY ca.Nombre;
+
+
 --para ordenar por total de población tenemos que quitar el formato ya que sino se convierte en un string y no lo ordena
 SELECT ca.Nombre, COUNT (p.ProvId) AS NumerodeProvincias, SUM (p.ProvHab) AS TotalPoblación --FORMAT N0 indicarle que es estilo numerico y el 0 para que no imprima el número con decimales
 FROM [Provincias] AS p
