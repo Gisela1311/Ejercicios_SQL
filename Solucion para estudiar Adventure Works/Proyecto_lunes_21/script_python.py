@@ -32,14 +32,22 @@ WHERE ca.Nombre LIKE '%de'
 GROUP BY ca.Nombre
 ORDER BY NumerodeProvincias DESC;'''
 
-query5 = ''' SELECT ProvNom, FORMAT(ProvHab, 'N0') from Provincias
+query5 = ''' SELECT ProvNom, FORMAT(ProvHab, 'N0') AS Población from Provincias
 WHERE ProvHab >= 1000000
 ORDER BY ProvNom ASC;'''
 
-query6 = '''SELECT TOP 5 ProvNom, FORMAT(ProvHab, 'N0') from Provincias
+query6 = '''SELECT TOP 5 ProvNom, FORMAT(ProvHab, 'N0') AS Población from Provincias
 ORDER BY ProvHab ASC;'''
-# query7=
-# query8=
+
+query7 = '''SELECT ProvNom, FORMAT(ProvHab, 'N0') AS Población from Provincias
+WHERE Len(ProvNom) = 7 AND (ProvHab BETWEEN 150000 AND 200000) OR (ProvHab BETWEEN 900000 AND 1000000);'''
+
+query8  = ''' SELECT FORMAT(SUM (p.ProvHab), 'N0') AS "Población de las provincias de las comunidades autonomas que empiezan por M"
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+WHERE ca.Nombre LIKE 'M%';'''
+
 # query9=
 # query10=
 
@@ -113,6 +121,32 @@ for row in result6:
     print(values) 
 
 print("\n ----------------------------------------------------------------------------------------")
+
+cursor.execute(query7)
+result7 = cursor.fetchall()
+
+print("Províncias con nombre de 7 letras y con población bien entre 150 y 200 mil hab o bien entre 900mil y 1 millón hab " + '\n')  
+for row in result7:
+    values = [
+        row[0],
+        row[1]
+    ]
+    print(values) 
+
+print("\n ----------------------------------------------------------------------------------------")
+
+cursor.execute(query8)
+result8 = cursor.fetchall()
+
+print("Total de la población de las CCAA que empiezan por M: " + '\n')  
+for row in result8:
+    values = [
+        row[0]
+    ]
+    print(values) 
+
+print("\n ----------------------------------------------------------------------------------------")
+
 
 
 conn.close()
