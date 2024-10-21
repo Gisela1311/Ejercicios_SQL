@@ -26,3 +26,8 @@ ON ca.ComID = p.ComID
 WHERE ca.Nombre LIKE '%de'
 GROUP BY ca.Nombre
 ORDER BY NumerodeProvincias DESC;
+
+-- ordenar alfabeticamente las provincias cuya población sea en millones
+SELECT ProvNom, ProvHab from Provincias
+WHERE ProvHab >= 1000000
+ORDER BY ProvNom ASC;

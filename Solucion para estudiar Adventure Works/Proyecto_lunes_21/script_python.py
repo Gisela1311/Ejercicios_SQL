@@ -32,7 +32,10 @@ WHERE ca.Nombre LIKE '%de'
 GROUP BY ca.Nombre
 ORDER BY NumerodeProvincias DESC;'''
 
-query5 =
+query5 = ''' SELECT ProvNom, ProvHab from Provincias
+WHERE ProvHab >= 1000000
+ORDER BY ProvNom ASC;'''
+
 # query6=
 # query7=
 # query8=
@@ -69,17 +72,31 @@ for row in result3:
     ]
     print(values) 
 
-cursor.execute(query3)
-result3 = cursor.fetchall()
+print("\n ----------------------------------------------------------------------------------------")
+cursor.execute(query4)
+result4 = cursor.fetchall()
 
 print("Listado de provincias terminadas por -de y número de provincias que tiene: " + '\n')  
-for row in result3:
+for row in result4:
     values = [
         row[0],
         row[1]
     ]
     print(values) 
-    
+
+print("\n ----------------------------------------------------------------------------------------")   
+cursor.execute(query5)
+result5 = cursor.fetchall()
+
+print("Listado de provincias con población superior a un millón, ordanadas alfabéticamente: " + '\n')  
+for row in result5:
+    values = [
+        row[0],
+        row[1]
+    ]
+    print(values) 
+
+print("\n ----------------------------------------------------------------------------------------")
 
 
 conn.close()
