@@ -16,3 +16,13 @@ inner join [ComunidadesAutonomas] AS ca
 ON ca.ComID = p.ComID
 WHERE ca.ComID = 12
 ORDER BY p.ProvHab DESC;
+
+--numero de provincias que tiene cada una de las ccaa que terminan con -de 
+
+SELECT ca.Nombre, COUNT (p.ProvId) AS NumerodeProvincias
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+WHERE ca.Nombre LIKE '%de'
+GROUP BY ca.Nombre
+ORDER BY NumerodeProvincias DESC;
