@@ -32,4 +32,12 @@ ON ca.ComID = p.ComID
 GROUP BY ca.Nombre
 ORDER BY SUM (p.ProvHab) DESC;
 
+--Crear una vista con datos concretos que nos interesa guardar 
+CREATE VIEW MiVista AS 
+SELECT ca.Nombre, FORMAT(SUM (p.ProvHab), 'N0') AS TotalPoblación
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+GROUP BY ca.Nombre;
+
 

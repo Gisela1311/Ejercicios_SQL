@@ -28,11 +28,23 @@
           <AssociatedConnUserName />
           <FullPath>Crear_tabla_comunidades.sql</FullPath>
         </FileNode>
+        <FileNode Name="Crear_tabla_provincias.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Crear_tabla_provincias.sql</FullPath>
+        </FileNode>
         <FileNode Name="Insert_data_table.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Insert_data_table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Numero_provincias_por_comunidad.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Numero_provincias_por_comunidad.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
