@@ -48,7 +48,13 @@ inner join [ComunidadesAutonomas] AS ca
 ON ca.ComID = p.ComID
 WHERE ca.Nombre LIKE 'M%';'''
 
-# query9=
+query9 = '''SELECT ca.Nombre, COUNT (p.ProvId) AS NumeroProvincias
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+WHERE ProvHab BETWEEN 700000 AND 800000
+GROUP BY ca.Nombre
+ORDER BY NumeroProvincias DESC;'''
 # query10=
 
 cursor.execute(query1)
@@ -138,7 +144,8 @@ print("\n ----------------------------------------------------------------------
 cursor.execute(query8)
 result8 = cursor.fetchall()
 
-print("Total de la población de las CCAA que empiezan por M: " + '\n')  
+columnas = [desc[0] for desc in cursor.description]
+print(columnas)  
 for row in result8:
     values = [
         row[0]
@@ -147,6 +154,18 @@ for row in result8:
 
 print("\n ----------------------------------------------------------------------------------------")
 
+cursor.execute(query9)
+result9 = cursor.fetchall()
+
+print("Número de provincias con población entre 700 y 800 mil hab. y CCAA a la que pertenecen: " + '\n')  
+for row in result9:
+    values = [
+        row[0],
+        row[1]
+    ]
+    print(values) 
+
+print("\n ----------------------------------------------------------------------------------------")
 
 
 conn.close()

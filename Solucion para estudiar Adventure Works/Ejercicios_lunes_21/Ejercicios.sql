@@ -47,4 +47,11 @@ inner join [ComunidadesAutonomas] AS ca
 ON ca.ComID = p.ComID
 WHERE ca.Nombre LIKE 'M%';
 
--- EJERCICIO 9 
+-- EJERCICIO 9 nombres de las ccaa que tengan alguna provincia con poblacion entre 700 y 800 mil hab. orden descendente.
+SELECT ca.Nombre, COUNT (p.ProvId) AS NumeroProvincias
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+WHERE ProvHab BETWEEN 700000 AND 800000
+GROUP BY ca.Nombre
+ORDER BY NumeroProvincias DESC;
