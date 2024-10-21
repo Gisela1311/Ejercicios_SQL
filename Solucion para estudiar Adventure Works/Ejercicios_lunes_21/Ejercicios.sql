@@ -55,3 +55,33 @@ ON ca.ComID = p.ComID
 WHERE ProvHab BETWEEN 700000 AND 800000
 GROUP BY ca.Nombre
 ORDER BY NumeroProvincias DESC;
+
+--EJERCICIO 10 ordenar alfabeticamente las prov con hab >1 millón. hay que mostrar una columna por cada ccaa
+DECLARE @columnas NVARCHAR(MAX);
+
+SELECT @columnas = STRING_AGG(QUOTENAME(Nombre), ',')
+FROM (SELECT distinct ca.Nombre AS Nombre 
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+WHERE ProvHab >= 1000000) as SourceTable
+select @columnas;
+
+DECLARE @sql NVARCHAR(MAX);
+
+SET @sql ='
+SELECT Provincia, ' + @columnas + ' 
+FROM 
+(
+	SELECT p.ProvNom AS Provincia, ca.Nombre AS ComunidadAutonoma, ProvHab 
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+WHERE ProvHab >= 1000000
+) AS SourceTable
+PIVOT 
+(
+	SUM(ProvHab)
+	FOR ComunidadAutonoma IN (' + @columnas + ')
+) AS PivotTable';
+EXEC sp_executesql @sql;

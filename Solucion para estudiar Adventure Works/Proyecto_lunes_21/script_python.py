@@ -55,7 +55,36 @@ ON ca.ComID = p.ComID
 WHERE ProvHab BETWEEN 700000 AND 800000
 GROUP BY ca.Nombre
 ORDER BY NumeroProvincias DESC;'''
-# query10=
+
+# query10 = '''DECLARE @columnas NVARCHAR(MAX);
+
+# SELECT @columnas = STRING_AGG(QUOTENAME(Nombre), ',')
+# FROM (SELECT distinct ca.Nombre AS Nombre 
+# FROM [Provincias] AS p
+# inner join [ComunidadesAutonomas] AS ca
+# ON ca.ComID = p.ComID
+# WHERE ProvHab >= 1000000) as SourceTable
+# select @columnas;
+
+# DECLARE @sql NVARCHAR(MAX);
+
+# SET @sql ='
+# SELECT Provincia, ' + @columnas + ' 
+# FROM 
+# (
+# 	SELECT p.ProvNom AS Provincia, ca.Nombre AS ComunidadAutonoma, ProvHab 
+# FROM [Provincias] AS p
+# inner join [ComunidadesAutonomas] AS ca
+# ON ca.ComID = p.ComID
+# WHERE ProvHab >= 1000000
+# ) AS SourceTable
+# PIVOT 
+# (
+# 	SUM(ProvHab)
+# 	FOR ComunidadAutonoma IN (' + @columnas + ')
+# ) AS PivotTable';
+# EXEC sp_executesql @sql;
+# '''
 
 cursor.execute(query1)
 result1 = cursor.fetchall()
@@ -167,5 +196,42 @@ for row in result9:
 
 print("\n ----------------------------------------------------------------------------------------")
 
+sql_columnas = """
+DECLARE @columnas NVARCHAR(MAX);
+SELECT @columnas = STRING_AGG(QUOTENAME(Nombre), ',')
+FROM (SELECT distinct ca.Nombre AS Nombre 
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+WHERE ProvHab >= 1000000) as SourceTable
+select @columnas;"""
+
+cursor.execute(sql_columnas)
+columnas = cursor.fetchone().columnas
+
+sql_dinamica = f"""
+SELECT Provincia, {columnas}  
+FROM 
+(
+	SELECT p.ProvNom AS Provincia, ca.Nombre AS ComunidadAutonoma, ProvHab 
+FROM [Provincias] AS p
+inner join [ComunidadesAutonomas] AS ca
+ON ca.ComID = p.ComID
+WHERE ProvHab >= 1000000
+) AS SourceTable
+PIVOT 
+(
+	SUM(ProvHab)
+	FOR ComunidadAutonoma IN ({columnas})
+) AS PivotTable;
+"""
+cursor.execute(sql_dinamica)
+filas = cursor.fetchall()
+
+nombres_columnas = [column[0] for column in cursor.description]
+
+print(nombres_columnas)
+for fila in filas:
+    print(fila)
 
 conn.close()
