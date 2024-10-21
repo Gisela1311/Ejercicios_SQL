@@ -32,11 +32,12 @@ WHERE ca.Nombre LIKE '%de'
 GROUP BY ca.Nombre
 ORDER BY NumerodeProvincias DESC;'''
 
-query5 = ''' SELECT ProvNom, ProvHab from Provincias
+query5 = ''' SELECT ProvNom, FORMAT(ProvHab, 'N0') from Provincias
 WHERE ProvHab >= 1000000
 ORDER BY ProvNom ASC;'''
 
-# query6=
+query6 = '''SELECT TOP 5 ProvNom, FORMAT(ProvHab, 'N0') from Provincias
+ORDER BY ProvHab ASC;'''
 # query7=
 # query8=
 # query9=
@@ -73,6 +74,7 @@ for row in result3:
     print(values) 
 
 print("\n ----------------------------------------------------------------------------------------")
+
 cursor.execute(query4)
 result4 = cursor.fetchall()
 
@@ -85,11 +87,25 @@ for row in result4:
     print(values) 
 
 print("\n ----------------------------------------------------------------------------------------")   
+
 cursor.execute(query5)
 result5 = cursor.fetchall()
 
 print("Listado de provincias con población superior a un millón, ordanadas alfabéticamente: " + '\n')  
 for row in result5:
+    values = [
+        row[0],
+        row[1]
+    ]
+    print(values) 
+
+print("\n ----------------------------------------------------------------------------------------")
+
+cursor.execute(query6)
+result6 = cursor.fetchall()
+
+print("TOP 5 provincias con menor población de España: " + '\n')  
+for row in result6:
     values = [
         row[0],
         row[1]

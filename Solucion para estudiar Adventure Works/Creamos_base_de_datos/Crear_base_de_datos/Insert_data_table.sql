@@ -19,8 +19,8 @@ select * from ComunidadesAutonomas; --esto permite que al ejecutarlo junto al In
 --para sustituir un dato ya insertado en una de las filas 
 
 UPDATE ComunidadesAutonomas 
-SET Nombre = 'Cantabria'
-Where ComunidadId = 6;
+SET Nombre = 'Asturias, Principado de'
+Where ComId = 3;
 select * from ComunidadesAutonomas;
 
 INSERT INTO ComunidadesAutonomas (ComunidadId, Nombre) VALUES 

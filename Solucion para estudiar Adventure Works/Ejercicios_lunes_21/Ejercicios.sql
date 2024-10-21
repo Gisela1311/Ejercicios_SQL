@@ -28,6 +28,10 @@ GROUP BY ca.Nombre
 ORDER BY NumerodeProvincias DESC;
 
 -- ordenar alfabeticamente las provincias cuya población sea en millones
-SELECT ProvNom, ProvHab from Provincias
+SELECT ProvNom, FORMAT(ProvHab, 'N0') from Provincias
 WHERE ProvHab >= 1000000
 ORDER BY ProvNom ASC;
+
+--nombre de las 5 provincias con menor población
+SELECT TOP 5 ProvNom, FORMAT(ProvHab, 'N0') from Provincias
+ORDER BY ProvHab ASC;
