@@ -11,16 +11,22 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "explorar tablas", "explorar
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Crear_base_de_datos", "Creamos_base_de_datos\Crear_base_de_datos\Crear_base_de_datos.ssmssqlproj", "{3D7025DB-A9F9-42D1-B709-180548C6DD05}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Ejercicios_lunes_21", "Ejercicios_lunes_21\Ejercicios_lunes_21.ssmssqlproj", "{ECDF10C9-0D0F-4D1C-A877-019336BE0B48}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Docs_profe", "Docs_profe\Docs_profe.ssmssqlproj", "{EF8ED4A4-0ACF-4CD6-B138-1D495304C45F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{768537C7-5AA7-4A2C-8D74-1253D6F3E420}.Default|Default.ActiveCfg = Default
 		{0DE485EC-CEEB-4B7A-A566-C558754D4EB4}.Default|Default.ActiveCfg = Default
 		{204AD6E9-AA2B-4717-9BE9-B06D259F5DF2}.Default|Default.ActiveCfg = Default
 		{08C54DF4-5636-473E-98C9-ADAF7E978302}.Default|Default.ActiveCfg = Default
 		{3D7025DB-A9F9-42D1-B709-180548C6DD05}.Default|Default.ActiveCfg = Default
+		{AF3098EF-73EE-41A2-B304-25D8DC0C2BCB}.Default|Default.ActiveCfg = Default
+		{ECDF10C9-0D0F-4D1C-A877-019336BE0B48}.Default|Default.ActiveCfg = Default
+		{EF8ED4A4-0ACF-4CD6-B138-1D495304C45F}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
