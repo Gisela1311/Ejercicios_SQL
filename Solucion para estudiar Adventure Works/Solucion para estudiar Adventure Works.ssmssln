@@ -15,6 +15,8 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Ejercicios_lunes_21", "Ejer
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Docs_profe", "Docs_profe\Docs_profe.ssmssqlproj", "{EF8ED4A4-0ACF-4CD6-B138-1D495304C45F}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Ejercicios_martes_22", "Ejercicios_martes_22\Ejercicios_martes_22.ssmssqlproj", "{D310A58D-8477-4FD0-B523-9555E68546CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
@@ -24,9 +26,10 @@ Global
 		{204AD6E9-AA2B-4717-9BE9-B06D259F5DF2}.Default|Default.ActiveCfg = Default
 		{08C54DF4-5636-473E-98C9-ADAF7E978302}.Default|Default.ActiveCfg = Default
 		{3D7025DB-A9F9-42D1-B709-180548C6DD05}.Default|Default.ActiveCfg = Default
-		{AF3098EF-73EE-41A2-B304-25D8DC0C2BCB}.Default|Default.ActiveCfg = Default
 		{ECDF10C9-0D0F-4D1C-A877-019336BE0B48}.Default|Default.ActiveCfg = Default
 		{EF8ED4A4-0ACF-4CD6-B138-1D495304C45F}.Default|Default.ActiveCfg = Default
+		{D310A58D-8477-4FD0-B523-9555E68546CA}.Default|Default.ActiveCfg = Default
+		{F44605C3-B718-403E-8EDB-B5C383B2160B}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
