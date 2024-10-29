@@ -1,0 +1,4 @@
+CREATE DATABASE RecetasBD;
+GO
+Use RecetasBD;
+GO

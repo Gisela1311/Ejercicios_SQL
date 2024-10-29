@@ -1,0 +1,4 @@
+CREATE TABLE Temporadas (
+    TempId TINYINT PRIMARY KEY IDENTITY(1,1),
+	NomTemp NVARCHAR (10) NOT NULL,
+);

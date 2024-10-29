@@ -1,0 +1,6 @@
+CREATE TABLE Ingredientesrecetas (
+	
+	IngId TINYINT FOREIGN KEY REFERENCES Ingredientes NOT NULL, 
+	PesoIng SMALLINT CHECK (PesoIng> 0) NOT NULL,
+	TempId TINYINT FOREIGN KEY REFERENCES Temporadas NOT NULL
+);
