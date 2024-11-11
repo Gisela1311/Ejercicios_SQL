@@ -16,9 +16,9 @@ INSERT INTO Recetas (NomRec, ElRec,TRec, DifId, CatId) VALUES
 SELECT * from Recetas;
 
 --he actualizado la receta de la tortilla, así que he borrado la que había insertado originariamente. 
-DELETE FROM Recetas 
-WHERE RecId = 3;
-SELECT * from Recetas;
+--DELETE FROM Recetas 
+--WHERE RecId = 3;
+--SELECT * from Recetas;
 
 
 

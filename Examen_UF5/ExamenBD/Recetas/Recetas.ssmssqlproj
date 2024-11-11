@@ -4,7 +4,7 @@
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="DESKTOP-NKUTOI8:DESKTOP-NKUTOI8\Alumne">
-          <Created>2024-10-28T09:42:12.2778704+01:00</Created>
+          <Created>2024-10-29T14:00:31.0175634+01:00</Created>
           <Type>SQL</Type>
           <Server>DESKTOP-NKUTOI8</Server>
           <UserName />
@@ -16,39 +16,39 @@
           <EncryptionOption>True</EncryptionOption>
           <ExecutionTimeout>0</ExecutionTimeout>
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+          <ApplicationName />
         </ConnectionNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="01_creacion_BD.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>01_creacion_BD.sql</FullPath>
         </FileNode>
         <FileNode Name="02_crea_dificultad.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>02_crea_dificultad.sql</FullPath>
         </FileNode>
         <FileNode Name="03_crea_categoría.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>03_crea_categoría.sql</FullPath>
         </FileNode>
         <FileNode Name="04_crea_temporada.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>04_crea_temporada.sql</FullPath>
         </FileNode>
         <FileNode Name="05_crea_receta.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>05_crea_receta.sql</FullPath>
         </FileNode>
@@ -59,52 +59,58 @@
           <FullPath>06_crea_ingrediente.sql</FullPath>
         </FileNode>
         <FileNode Name="07_crea_ingredientes_recetas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>07_crea_ingredientes_recetas.sql</FullPath>
         </FileNode>
         <FileNode Name="08_inserta_categorias.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>08_inserta_categorias.sql</FullPath>
         </FileNode>
         <FileNode Name="09_inserta_dificultades.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>09_inserta_dificultades.sql</FullPath>
         </FileNode>
         <FileNode Name="10_inserta_temporadas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>10_inserta_temporadas.sql</FullPath>
         </FileNode>
         <FileNode Name="11_inserta_Ingredientes.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>11_inserta_Ingredientes.sql</FullPath>
         </FileNode>
         <FileNode Name="12_inserta_recetas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>12_inserta_recetas.sql</FullPath>
         </FileNode>
         <FileNode Name="13_inserta_ingredientes_recetas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>13_inserta_ingredientes_recetas.sql</FullPath>
         </FileNode>
         <FileNode Name="14_Consulta_peso.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-NKUTOI8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-NKUTOI8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>14_Consulta_peso.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
